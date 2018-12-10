@@ -1,0 +1,1 @@
+[{"model": "todo.todo", "pk": 1, "fields": {"image": "images/20160220_195438.jpg", "radius": 50, "x": 300, "y": 70, "z": 10, "len1": 10, "len2": 10, "len3": 10, "title": "hellooo circle"}}]
