@@ -1,0 +1,1 @@
+[{"model": "todo.todo", "pk": 3, "fields": {"r": 50, "cx": 100, "cy": 100, "fill": "orange"}}, {"model": "todo.todo", "pk": 4, "fields": {"r": 100, "cx": 500, "cy": 500, "fill": "yellow"}}]

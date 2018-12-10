@@ -1,15 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
-from .models import Todo
+from .models import D3model
 import json, os
 from django.conf import settings
 from django.core import serializers
 from django.core.serializers.json import DjangoJSONEncoder
 
-
-def todo(request):
-    todos = Todo.objects
-    return render(request, 'todo/todo.html',{'todos' : todos})
 
 def jsontojs(request):
     #buff = Todo.objects

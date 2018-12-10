@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'jobs',
     'todo',
+    'restapi',
 ]
 
 MIDDLEWARE = [
