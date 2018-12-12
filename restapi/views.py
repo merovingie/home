@@ -5,25 +5,26 @@ import json, os
 from django.conf import settings
 from django.core import serializers
 from django.core.serializers.json import DjangoJSONEncoder
+from rest_framework import viewsets
+from .serializers import D3modelserializer
 
 
-def jsontojs(request):
-    #buff = Todo.objects
-    #local_file_path = '{0}/{1}/{2}'.format(resolve(request.path).todo 'statics', 'd.json')
-    # data = {
-    #     'r': buff.radius,
-    #     'cx': buff.x,
-    #     'cy': buff.y,
-    #     'fill': 'pink'
-    # }
-    global_file_path = os.path.join(settings.STATIC_ROOT, 'd.json')
-
-    with open( global_file_path , 'w') as outfile:
-        buff = serializers.serialize("json", Todo.objects.all(), fields=('r','cx','cy','fill'), cls=DjangoJSONEncoder, ensure_ascii=False)
-        #fileIN = str(buff)
-        #SYS = json.dump(fileIN, global_file_path, ensure_ascii=False)
-        outfile.write(buff)
-        #json.dump(data, global_file_path)
+class jsontojs(viewsets.ModelViewSet):
+    queryset = D3model.objects.all()
+    serializer_class = D3modelserializer
 
 
-    return JsonResponse(buff, safe=False)
+    
+    def jsontojsView(buff):
+        global_file_path = os.path.join(settings.STATIC_ROOT, 'd.json')
+        buff = serializer_class
+        with open( global_file_path , 'w') as outfile:
+            outfile.write(buff)
+            # buff = serializers.serialize("json", Todo.objects.all(), fields=('r','cx','cy','fill'), cls=DjangoJSONEncoder, ensure_ascii=False)
+        return JsonResponse(buff, safe=False)
+
+
+    
+
+
+

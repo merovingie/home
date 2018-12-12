@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'jobs',
     'todo',
     'restapi',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

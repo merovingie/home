@@ -11,5 +11,5 @@ class D3model(models.Model):
     
 
     def __str__(self):
-        return f'{self.title}+' '+{self.type}'
+        return f'{self.title} {self.type}'
         
