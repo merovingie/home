@@ -1,0 +1,56 @@
+{% extends "login/base.html" %}
+{% block content %}
+        <div class="container">
+        helloo again this box_started at login app
+        <br>
+        {% if user.is_authenticated %}
+        <form method="POST" action="{% url 'logout' %}" >
+                {% csrf_token %}
+                <input type="submit" value="logout">
+                <input type="hidden" name="next" value="{{ next }}">
+        </form>
+            <H2>your name is {{ user.username }}</H2>
+            <div class="container">
+                    {% for box_number in box_numbers %}
+                    
+                    <p> helloo this index in login and Box NUmber is At {{ box_number }}
+                        </p>
+                    {% empty %}
+                    <P>NO boxes Horraayyy</P>
+
+                    {% endfor %}
+                    <form method = "POST">
+                        {% csrf_token %}
+                        {{ form1 }}
+                        
+                        <button type="submit">add box to db</button>
+                    </form>
+            </div> 
+            <br>     
+            <div>
+                    <form method = "POST">
+                            {% csrf_token %}
+                            {{ form2 }}
+                            
+                            <button type="submit">add DID</button>
+                        </form>
+                    <br>
+                    
+            </div>
+
+        {% else %}
+            <H2>You are not logged in</H2>
+            <form method="POST" action="{% url 'kathy' %}" >
+                    {% csrf_token %}
+                    <input type="submit" value="KAthy another app login">
+                    <input type="hidden" name="next" value="{{ next }}">
+            </form>
+            <form method="POST" action="{% url 'login' %}" >
+                    {% csrf_token %}
+                    <input type="submit" value="Histo Login">
+                    <input type="hidden" name="next" value="{{ next }}">
+            </form>
+        {% endif %}
+
+    </div>              
+{% endblock content %}

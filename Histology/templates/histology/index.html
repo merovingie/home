@@ -1,0 +1,58 @@
+{% extends "login/base.html" %}
+{% block content %}
+        <div class="container">
+        helloo again this login index at login app
+        <br>
+        {% if user.is_authenticated %}
+        <form method="POST" action="{% url 'logout' %}" >
+                {% csrf_token %}
+                <input type="submit" value="logout">
+                <input type="hidden" name="next" value="{{ next }}">
+        </form>
+        {% for box in box_list %}
+        <P>
+            <H2>Box Number :</H2>
+                {{ box.box_number }}
+                <form method="POST" action="{% url 'box_details' box.box_number %}">
+                        {% csrf_token %}
+                <button type="submit" >Details</button>
+                </form>
+                <button type= "submit" >Edit Box DIDs</button>
+
+        </P>
+        {% empty %}
+        <P>NO boxes Horraayyy</P>
+
+        {% endfor %} 
+        
+            <H2>your name is {{ user.username }}</H2>
+            <div class="container">
+                    
+                    <form method = "POST">
+                            {% csrf_token %}
+                            {{ form }}
+                            
+                            <button type= "submit" >start a box</button>
+                        </form>
+
+                    
+            </div>      
+
+        {% else %}
+            <H2>You are not logged in</H2>
+            <form method="POST" action="{% url 'kathy' %}" >
+                    {% csrf_token %}
+                    <input type="submit" value="KAthy another app login">
+                    <input type="hidden" name="next" value="{{ next }}">
+            </form>
+            <form method="POST" action="{% url 'login' %}" >
+                    {% csrf_token %}
+                    <input type="submit" value="Histo Login">
+                    <input type="hidden" name="next" value="{{ next }}">
+            </form>
+        {% endif %}
+
+        
+       
+    </div>              
+{% endblock content %}

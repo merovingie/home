@@ -1,0 +1,26 @@
+{% extends "login/base.html" %}
+{% block content %}
+<br>
+This is Box_details html from login app
+<br>
+  Box Number : {{ box1.box_number}}
+  <br>
+  Box Duration : <time datetime="PTHMS {{ box1.duration }}">
+  <br>
+  Box First Name creator : {{ box1.first_name }}
+  <br>
+  Box Num of Reqs : {{ box1.reqtotal_num }}
+  <br>
+  Box Type : {{ box1.Box_type }}
+  <br>
+  Box DID Range : {{ box1.starting_DID}} - {{ box1.ending_DID }}
+  <br>
+  Problems : {{ box1.problem_flag }}
+  <br>
+  NUmber of Ct : {{ box1.container_num }}
+  <br>
+  Number of Cs : {{ box1.cassettes_num }}
+
+
+
+{% endblock content %}

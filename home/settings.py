@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'todo',
     'restapi',
     'rest_framework',
+    'accounts',
+    'skills',
+    'Histology',
 ]
 
 MIDDLEWARE = [
