@@ -1,0 +1,32 @@
+<ul [hidden]="!allowList">
+  <li [hidden]="allowFinished" *ngFor="let Todo of Todos"><s>{{ Todo }}</s><button (click)="ondeleteTodo(Todo)" class="btn btn-danger ml-1">-</button><button (click)="onfinished(Todo)" class="btn btn-warning ml-1">Finishined</button></li>
+  <li [hidden]="!allowFinished" *ngFor="let Todo of Todos">{{ Todo }}<button (click)="ondeleteTodo(Todo)" class="btn btn-danger ml-1">-</button><button (click)="onfinished(Todo)" class="btn btn-warning ml-1">Finishined</button></li>
+</ul> 
+<p style= 'font-size:3rem'>
+<label>Angular ToDo List</label>
+<input type="text" class="form-control" (input)="onUpdate($event)">
+<button (click)="addTolist()" class="btn btn-primary mr-1">+</button>
+
+
+
+
+  <br>
+  {{ helloString | lowercase }}
+  <br>
+  helloooo there {{ firstname }} {{ lastname | uppercase }} 
+  <br>  
+  number to increase and decrease  = {{ height }} no# , number in feets ({{ height_feet|number:"1.0" }})
+  <span *ngIf="height > 160" class="badge badge-danger">Number Reached threshold</span>
+  <br>
+  Whatever date here: {{ date|date }}
+  <br>
+  button to change the number
+</p>
+<button [disabled]="!allowButton" (click)="turnTextColorGreen()" class="btn btn-primary mr-1" >Turn Text Color Green</button>
+<button (click)="height_up()" class="btn btn-primary mr-1">+</button>
+<button (click)="height_down()" class="btn btn-primary">-</button>
+<button (click)="allowButtonButton()" class="btn btn-danger ml-1" >allow coloring button</button>
+<br>
+<br>
+<br>
+<p *ngIf="allowButton" class="{{ Zcolor }} bg-dark">string truncate function defined in source: {{ string_trunc | uppercase }}</p>
