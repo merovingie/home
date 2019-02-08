@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
-import { LoginComponent } from './auth/login/login.component';
+import { loginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { HackwithmypiComponent } from './hackwithmypi/hackwithmypi.component';
 import { MrpastaComponent } from './mrpasta/mrpasta.component';
 import { CommandsComponent } from './commands/commands.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { VimComponent } from './hackwithmypi/vim/vim.component';
+import { TerminalComponent } from './hackwithmypi/terminal/terminal.component';
+import { codeTextFieldComponent } from './hackwithmypi/vim/codeTextField.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +24,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
     CommandsComponent,
     MrpastaComponent,
     SignupComponent,
-    LoginComponent,
-    HackwithmypiComponent
+    loginComponent,
+    HackwithmypiComponent,
+    VimComponent,
+    TerminalComponent,
+    codeTextFieldComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +36,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FlexLayoutModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [codeTextFieldComponent]
 })
 export class AppModule { }

@@ -1,0 +1,14 @@
+<ol>
+    <li>
+      <mat-form-field>
+        <input matInput [(ngModel)]="fileName" placeholder="Please enter Vim`s New File Name?">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Create</button>
+    </li>
+    <li *ngIf="codeTextField">
+      You chose: <i>{{animal}}</i>
+    </li>
+</ol>
+  
