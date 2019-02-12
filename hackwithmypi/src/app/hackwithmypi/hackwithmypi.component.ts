@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hackwithmypi.component.css']
 })
 export class HackwithmypiComponent implements OnInit {
+  
 
   constructor() { }
 

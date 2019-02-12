@@ -15,7 +15,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { VimComponent } from './hackwithmypi/vim/vim.component';
 import { TerminalComponent } from './hackwithmypi/terminal/terminal.component';
-import { codeTextFieldComponent } from './hackwithmypi/vim/codeTextField.component';
+// import { codeTextFieldComponent } from './hackwithmypi/vim/codeTextField.component';
+import { ScriptComponent } from './hackwithmypi/script/script.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { codeTextFieldComponent } from './hackwithmypi/vim/codeTextField.compone
     HackwithmypiComponent,
     VimComponent,
     TerminalComponent,
-    codeTextFieldComponent
+    ScriptComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +41,6 @@ import { codeTextFieldComponent } from './hackwithmypi/vim/codeTextField.compone
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [codeTextFieldComponent]
+  entryComponents: []
 })
 export class AppModule { }

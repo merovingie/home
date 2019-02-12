@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { codeTextFieldComponent } from './codeTextField.component';
+// import { codeTextFieldComponent } from './codeTextField.component';
 import { MatDialog } from '@angular/material';
 
 @Component({
@@ -9,7 +9,8 @@ import { MatDialog } from '@angular/material';
 })
 export class VimComponent implements OnInit {
   fileName: string;
-  codeTextField: string;
+  codeArea: string;
+  scripts = [{scriptName: 'alpha', scriptContent: 'echo "i love U"'},{ scriptName: 'beta', scriptContent: 'echo "i hate U"'}];
   
   constructor(private dialog: MatDialog) { 
 
@@ -19,10 +20,8 @@ export class VimComponent implements OnInit {
   }
   
   openDialog(): void {
-    this.dialog.open(codeTextFieldComponent, {
-      width: '550px',
-      data: {name: this.fileName, codeTextField: this.codeTextField}
-    });
+    this.scripts.push({scriptName: this.fileName, scriptContent: this.codeArea});
+    console.log(this.scripts);
   }
 
 }

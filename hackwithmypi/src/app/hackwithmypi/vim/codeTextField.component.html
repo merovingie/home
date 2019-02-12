@@ -1,21 +1,16 @@
-<div class="example-container">
+<!-- <div class="example-container" class="terminal-div">
     <h1 mat-dialog-title>Please ENter Ur Code Here</h1>
         <mat-dialog-content>
-        <mat-form-field>
-          <input matInput placeholder="lineCode">
-        </mat-form-field>
-
-        <mat-form-field>
-            <button mat-button>Post Line TO vim!</button>
-        </mat-form-field>
-        
-        <mat-form-field>
-          <textarea matInput placeholder="codeArea">Code u written and passed</textarea>
+        <mat-form-field class="terminal">
+          <textarea matInput placeholder="Code Area" name="codeArea"></textarea>
         </mat-form-field>
         </mat-dialog-content>
+        
         <div mat-dialog-actions>
                 <button mat-button [mat-dialog-close]="false">Cancel</button>
-                <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Save</button>
+                <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial (click)="PassData(codeArea)">Save</button>
         </div>
-      </div>
+
+</div>
+<textarea hidden *ngFor="let script1 of script1s" [element]="script1"></textarea> -->
       

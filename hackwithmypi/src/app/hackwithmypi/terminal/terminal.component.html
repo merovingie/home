@@ -1,3 +1,20 @@
-<p>
-  terminal works!
-</p>
+<form >  
+    <mat-form-field class="example-full-width" class="terminal-input" fxLayout="column">
+      <input matInput placeholder="Enter Linux Command" rows="1" [(ngModel)]="commandsText" name="terminal">
+    </mat-form-field>
+    <br>
+    <mat-divider></mat-divider>
+    <br>
+      <button mat-raised-button color="accent">Clear</button>
+    <span>
+      <button mat-raised-button color="warn">Post Command</button>
+    </span>
+  
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+  <br>
+    <mat-form-field class="terminal">
+      <textarea matInput placeholder="Terminal" rows="20" readonly>guest:/> {{ commandsText }}</textarea>
+    </mat-form-field>
+</form> 

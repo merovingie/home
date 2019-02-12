@@ -1,0 +1,17 @@
+.terminal {
+    border: 5px;
+    border-color: blueviolet;
+    width: 1000px;
+    height: 800px;
+    color: green;
+    /* background-color: aquamarine; */
+}
+
+.terminal-input {
+    border: 5px;
+    border-color: blueviolet;
+    width: 1000px;
+    height: 50px;
+    color: green;
+    /* background-color: aquamarine; */
+}

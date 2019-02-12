@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./terminal.component.css']
 })
 export class TerminalComponent implements OnInit {
-
+  commandsText = '';
+  
   constructor() { }
 
   ngOnInit() {

@@ -1,14 +1,17 @@
-<ol>
+<ul>
     <li>
-      <mat-form-field>
-        <input matInput [(ngModel)]="fileName" placeholder="Please enter Vim`s New File Name?">
+      <mat-form-field class="script-terminal">
+        <input matInput [(ngModel)]="fileName" placeholder="Please enter New Script`s Name?">
       </mat-form-field>
+    </li>
+    <li>
+        <mat-form-field class="terminal">
+            <textarea matInput rows="15" [(ngModel)]="codeArea" placeholder="Code Area" name="content"></textarea>
+        </mat-form-field>
     </li>
     <li>
       <button mat-raised-button (click)="openDialog()">Create</button>
     </li>
-    <li *ngIf="codeTextField">
-      You chose: <i>{{animal}}</i>
-    </li>
-</ol>
-  
+
+</ul>
+<app-script *ngFor="let script of scripts" [element]="script"></app-script>  
