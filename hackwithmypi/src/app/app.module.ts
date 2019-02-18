@@ -17,6 +17,7 @@ import { VimComponent } from './hackwithmypi/vim/vim.component';
 import { TerminalComponent } from './hackwithmypi/terminal/terminal.component';
 // import { codeTextFieldComponent } from './hackwithmypi/vim/codeTextField.component';
 import { ScriptComponent } from './hackwithmypi/script/script.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ScriptComponent } from './hackwithmypi/script/script.component';
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
