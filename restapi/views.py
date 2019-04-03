@@ -14,7 +14,7 @@ class jsontojs(viewsets.ModelViewSet):
     serializer_class = D3modelserializer
 
 
-    
+
     def jsontojsView(buff):
         global_file_path = os.path.join(settings.STATIC_ROOT, 'd.json')
         buff = serializer_class
